@@ -1,0 +1,320 @@
+/* header */
+header {
+    background-color: #881738;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 3px 6px #00000029;
+    z-index:999;
+    height: 75px;
+    opacity: 1;
+}
+
+.header {
+    padding-top: 5px;
+    margin-top: 20px;
+}
+
+.menu {
+    float: right;
+    list-style: none;
+    display: flex;
+    padding-right: 40px;
+}
+
+.header a {
+    padding-right: 50px;
+}
+
+.menu a {
+    color: #000
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* Top */
+.top-wrapper {
+    background-image: url(img/IMG_0650.jpeg);
+    height: 700px;
+    background-size: cover;
+}
+
+.top-text {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.top-text h1 {
+    font-size: 135px;
+    font-family: 'Almarai', sans-serif;
+    color: blueviolet;
+}
+
+.top-text p {
+    padding-top: 60px;
+    font-size: 20px;
+    color: cornsilk;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
+/* About */
+.about-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color:black;
+    color: whitesmoke;
+}
+
+.about-wrapper h1 {
+    text-align: center;
+}
+
+.about-left {
+    padding-top: 50px;
+    padding-left: 200px;
+}
+.about-left h3 {
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+.about-left img {
+    width: 50%;
+    height: 50%;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-position: left left;
+}
+
+.about-left h4 {
+    padding-left: 30px;
+}
+
+.about-left ul {
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+
+#al-li {
+    list-style: none;
+}
+
+.about-right {
+    padding-right: 200px;
+}
+
+.about-right p {
+    font-size: 20px;
+    font-family: 'Knewave', cursive;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+.about-right2 {
+    background-color: pink;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+#twitter {
+    font-size: 60px;
+    color: #00aced ;
+    text-decoration: none;
+}
+
+#instagram {
+    font-size: 60px;
+    color: darkred;
+}
+
+#mail {
+    font-size: 60px;
+    color: #db4a39;
+}
+
+
+
+/* Skills */
+
+.skills-wrapper {
+    background-image: url(img/yokosuta1.png);
+    background-size: cover;
+    padding-bottom: 80px;
+}
+
+.skills-wrapper h1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.skills-wrapper h3 {
+    background-color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Knewave', cursive;
+}
+
+.skill-left {
+    padding-left: 80px;
+    margin-left: 150px;
+}
+
+.skill-right {
+    padding-left: 40px;
+}
+
+.progress-bars {
+    height: 40px;
+    text-align: center;
+    color: whitesmoke;
+    background-color:#db4a39;
+}
+
+
+/* Works */
+.works-wrapper {
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+}
+
+.works-wrapper h1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.works-wrapper a {
+    background-color: black;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.work-release {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+
+.work-port img{
+    border: 1px #881738 solid;
+    box-shadow: 0 0 1px;
+    width: 360px;
+    height: 280px;
+}
+
+.work-port p {
+    text-align: center;
+    padding-top: 12px;
+}
+
+/* Contact */
+
+.contact-wrapper {
+    background-color: black;
+    color: white;
+}
+
+.contact-wrapper h1 {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form {
+    margin-left: 220px;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-form input{
+    width: 80%;
+    height: 40px;
+}
+
+.contact-form textarea {
+    width: 80%;
+    height: 150px;
+}
+
+div.contact-wrapper h1 hr {
+    border-top: none !important;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    background-color: #881738;
+    color: white;
+    width: 80%;
+    height: 35px;
+    border-style: none;
+}
+
+.twitter-form {
+    margin-top: 30px;
+    margin-left: 460px;
+    width: 30%;
+    height: 80%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 13px;
+    padding-left: 13px;
+    background-color: gray;
+    color: white;
+}
+
+.twitter-form i {
+    color: white;
+}
+
+.twitter-form p {
+    text-align: center;
+    color: white;
+}
+
+.twitter-form a {
+    margin-left: 100px;
+    background-color: #00aced;
+    color: white;
+    border-radius: 10px;
+}
+
+.twitter {
+    padding: 2% 5% 1% 5%;
+}
+
+.twitter-form-bottom {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+}
+
+/* footer */
+
+footer {
+    height: 75px;
+    width: 100%;
+    background-color: #881738;
+    color: white;
+}
+
+.footer p {
+    padding-top: 24px;
+    padding-left: 30px;
+}
+
