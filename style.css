@@ -172,6 +172,11 @@ header {
     background-color:#db4a39;
 }
 
+.progress-bars p {
+    padding-top: 6px;
+    font-size: 20px;
+}
+
 
 /* Works */
 .works-wrapper {
@@ -261,7 +266,7 @@ div.contact-wrapper h1 hr {
 
 .twitter-form {
     margin-top: 30px;
-    margin-left: 460px;
+    margin-left: 270px;
     width: 30%;
     height: 80%;
     padding-top: 10px;
@@ -282,7 +287,7 @@ div.contact-wrapper h1 hr {
 }
 
 .twitter-form a {
-    margin-left: 100px;
+    margin-left: 70px;
     background-color: #00aced;
     color: white;
     border-radius: 10px;
@@ -313,16 +318,76 @@ footer {
 }
 
 
+
+
 /* responsive */
 
 @media(max-width: 1000px) {
+
+.header {
+    height: auto;
+}
+.top-text h1 {
+    font-size: 120px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.about-left {
+    width: 100%;
+}
+
+.about-left img {
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+.work-port {
+    width: auto;
+    height: auto;
+}
+
+.twitter-form {
+    margin-left: 120px;
+}
 
 }
 
 
 
 
-
 @media(max-width: 670px) {
+    .header {
+        height: auto;
+    }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-right {
+    width: 100%;
+}
+
+.about-right p {
+        margin-left: 80px;
+    }
+.works-wrapper{
+    height: auto;
+}
+
+.work-port {
+    width: auto;
+    height: auto;
+}
+
+.twitter-form {
+    margin-left: 50px;
+}
 
 }
