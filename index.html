@@ -24,13 +24,21 @@
   <!-- header -->
   <header>
     <div class="header">
-      <ul class="menu">
-        <li><a href="#top-wrapper" class="">Home</a></li>
-        <li><a href="#about-wrapper" class="">About</a></li>
-        <li><a href="#skills-wrapper" class="">Skills</a></li>
-        <li><a href="#works-wrapper" class="">Works</a></li>
-        <li><a href="#contact-wrapper" class="">Contact</a></li>
-      </ul>
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#top-wrapper"><p>Aki-port</p></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class=" collapse navbar-collapse" id="navbar">
+            <ul class="menu navbar-nav ml-auto">
+              <li><a href="#top-wrapper" class="nav-link">Home</a></li>
+              <li><a href="#about-wrapper" class="nav-link">About</a></li>
+              <li><a href="#skills-wrapper" class="nav-link">Skills</a></li>
+              <li><a href="#works-wrapper" class="nav-link">Works</a></li>
+              <li><a href="#contact-wrapper" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+    </nav>
     </div>
   </header>
 
@@ -156,7 +164,7 @@
       <input id="mail2" type="email" name="mail" placeholder="メールアドレス(確認用)を入力してください"><br>
       <label for="comment">コメント</label><br>
       <textarea id="comment" name="comment" placeholder="お問い合わせの内容を入力してください"></textarea><br>
-      <button type="button">送信</button>
+      <button type="button">送  信</button>
     </div>
     <div class="twitter-form">
       <p>お問い合わせ内容はTwitterでも受け付けております。<br>お気軽にお問い合わせください。</p>
