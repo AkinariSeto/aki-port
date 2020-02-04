@@ -1,16 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"></html>
 
 <head>
   <title>Seto Akinari</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="script.js">
+
   <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width,initial-scale=1.0"
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+<link rel="stylesheet" href="style.css">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,12 +44,10 @@
   <!-- Top -->
   <div class="top-wrapper" id="top-wrapper">
     <div class="top-text">
-      <h1>Seto Akinari<br>Portforio</h1>
+      <h1 id="shimei"><span>Seto Akinari<br>Portforio</span></h1>
       <p>神奈川県西を拠点に活動をしている<br>瀬戸 章成と申します。<br>人との出会いを大切にし、関わる人が1分1秒でも<br>「気持ちよく」過ごせるよう日々生きております。<br>長いお付き合いができれば幸いです。</p>
     </div>
   </div>
-
-
 
   <!-- About -->
   <div class="about-wrapper" id="about-wrapper">
@@ -67,7 +64,7 @@
               <li>大手スポーツショップ</li>
               <li>中学校非常勤講師</li>
               <li>小学校常勤講師</li>
-              <li id="al-li">その後セブ島へIT留学を<br>経験し、今に至る。</li>
+              <li id="al-li">その後セブ島へIT留学、<br>職業訓練校を経て、今に至る。</li>
             </ul>
           </div>
         </div>
@@ -149,27 +146,83 @@
         <a href="https://akinariseto.github.io/Bootstrap-tutorial/." target="_blank"><img src="img/bootstrap-site.png" alt="Bootstrap-site"></a>
         <p>Bootstrap-tutrial</p>
       </div>
+      <!-- <div class="work-port">
+        <a href="https://akinariseto.github.io/Bootstrap_tutrial2/" target="_blank"><img src="img/bootstrap-site.png" alt="Bootstrap-site"></a>
+        <p>Bootstrap-tutrial2</p>
+      </div>
+      <div class="work-port">
+        <a href="https://akinariseto.github.io/isara/" target="_blank"><img src="img/bootstrap-site.png" alt="Bootstrap-site"></a>
+        <p>isara</p>
+      </div> -->
     </div>
   </div>
-  
 
 
   <!-- contact -->
+<?php
+
+session_start();
+
+//入力チェック
+$message = '';
+if (isset($_POST['confirm'])) { //確認ボタンを押してポストしたものなら
+    $error_flg = false;
+    //名前の必須入力チェック
+    if ($_POST['name'] === '') {
+        $message .= "お名前は必ず入力してください<br>";
+        $error_flg = true;
+    }
+    //名前の必須入力チェック
+    if ($_POST['mail'] === '') {
+        $message .= "メールアドレスは必ず入力してください<br>";
+        $error_flg = true;
+    }
+    //内容の必須入力チェック
+    if ($_POST['content'] === '') {
+        $message .= "お問い合わせ内容は必ず入力してください<br>";
+        $error_flg = true;
+    }
+
+    //エラーが無ければ入力内容をセッションに保存して確認画面へ
+    if (!$error_flg) {
+        $_SESSION['inquiry'] = $_POST;
+        header('Location: confirmation.php');
+        exit();
+    }
+}
+// 書き直し
+if (isset($_REQUEST['action']) && $_REQUEST['action'] === 'rewrite') {
+    $_POST = $_SESSION['inquiry'];
+}
+?>
+
   <div class="contact-wrapper" id="contact-wrapper">
     <h1>Contact
       <hr>(ご依頼・お問い合わせ)</h1>
 
     <div class="contact-form">
+      <p style="color: red"><?php echo $message ?></p>
+      <form action="index.php" method="POST">
       <label for="yourname">名前：</label><br>
-      <input id="yourname" type="text" name="yourname" placeholder="お名前を入力してください"><br>
+      <input id="yourname" type="text" name="yourname" placeholder="お名前を入力してください" value="<?php if (isset($_POST['name'])) {
+    echo htmlspecialchars($_POST['name']);
+}
+?>"><br>
       <label for="mail1">メールアドレス：</label><br>
-      <input id="mail1" type="email" name="mail" placeholder="メールアドレスを入力してください"><br>
-      <label for="mail2">メールアドレス(確認用)：</label><br>
-      <input id="mail2" type="email" name="mail" placeholder="メールアドレス(確認用)を入力してください"><br>
-      <label for="comment">コメント</label><br>
-      <textarea id="comment" name="comment" placeholder="お問い合わせの内容を入力してください"></textarea><br>
-      <button type="button">送  信</button>
-    
+      <input id="mail1" type="email" name="mail" placeholder="メールアドレスを入力してください" value="<?php if (isset($_POST['mail'])) {
+    echo htmlspecialchars($_POST['mail']);
+}
+?>"><br>
+      <label for="comment">問い合わせ内容：</label><br>
+      <textarea id="comment" name="content" placeholder="お問い合わせの内容を入力してください"><?php if (isset($_POST['content'])) {
+    echo htmlspecialchars($_POST['content']);
+}
+?></textarea><br>
+      <input id="contact-submit" type="submit" name="send" value="送　信" class="send-button" style=" color: white; background-color: #881738;">
+    </form>
+
+
+
     <div class="twitter-form">
       <p>お問い合わせ内容はTwitterでも受け付けております。<br>お気軽にお問い合わせください。</p>
       <a class="twitter" href="https://twitter.com/Aki_lifetime" target="_blank">
@@ -202,6 +255,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  <script src="jquery.inview.js" type="text/javascript"></script>
+  <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

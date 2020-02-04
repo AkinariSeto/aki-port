@@ -4,24 +4,34 @@ header {
     position: fixed;
     width: 100%;
     box-shadow: 0px 3px 6px #00000029;
-    z-index:999;
-    height: 75px;
+    z-index: 999;
+    height: 60px;
     opacity: 1;
     padding-top: 15px;
 }
 
 
 .header nav {
-    background-color: #881738; 
+    background-color: #881738;
+    padding-left: 70px;
 }
 
-.menu a {
-    color: #000
+.header p {
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.header ul {
+    padding-right: 50px;
 }
 
 .menu li a {
     text-decoration: none;
     color: #000;
+    padding-bottom: 5px;
 }
 
 
@@ -40,7 +50,11 @@ header {
 .top-text h1 {
     font-size: 135px;
     font-family: 'Almarai', sans-serif;
-    color: blueviolet;
+    color: #fff;
+}
+
+.top-text span {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .top-text p {
@@ -53,11 +67,13 @@ header {
 
 /* About */
 .about-wrapper {
+    width: auto;
+    height: 750px;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color:black;
+    background-color: black;
     color: whitesmoke;
-    font-family: "futera","memo","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-family: "futera", "memo", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 .about-wrapper h1 {
@@ -66,19 +82,20 @@ header {
 
 .about-left {
     padding-top: 50px;
-    padding-left: 200px;
+    padding-left: 50px;
 }
+
 .about-left h3 {
     padding-top: 20px;
-    padding-left: 60px;
+    padding-left: 45px;
 }
 
 .about-left img {
     width: 50%;
     height: 50%;
-    margin-left: 10px;
     border-radius: 50%;
     background-position: left left;
+    padding-right: 10px;
 }
 
 .about-left h4 {
@@ -87,7 +104,7 @@ header {
 
 .about-left ul {
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 25px;
     font-size: 20px;
 }
 
@@ -96,9 +113,6 @@ header {
     list-style: none;
 }
 
-.about-right {
-    padding-right: 200px;
-}
 
 .about-right p {
     font-size: 20px;
@@ -108,17 +122,18 @@ header {
 }
 
 .about-right2 {
-    background-color: pink;
+    background-color: white;
     border-radius: 15px;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     flex-wrap: wrap;
+    margin-top: 65px;
 }
 
 #twitter {
     font-size: 60px;
-    color: #00aced ;
+    color: #00aced;
     text-decoration: none;
 }
 
@@ -140,7 +155,7 @@ header {
     background-image: url(img/yokosuta1.png);
     background-size: cover;
     padding-bottom: 80px;
-    font-family: "futera","memo","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-family: "futera", "memo", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 .skills-wrapper h1 {
@@ -151,14 +166,14 @@ header {
 
 .skills-wrapper h3 {
     background-color: #fff;
-    display: inline-block;
+    display: inline-flex;
     margin-top: 10px;
-    font-family: 'Knewave', cursive;
+    font-family: "futera", "memo", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 .skill-left {
-    padding-left: 80px;
-    margin-left: 150px;
+    padding-left: 20px;
+    margin: 0 auto;
 }
 
 .skill-right {
@@ -169,7 +184,7 @@ header {
     height: 40px;
     text-align: center;
     color: whitesmoke;
-    background-color:#db4a39;
+    background-color: #db4a39;
 }
 
 .progress-bars p {
@@ -181,9 +196,9 @@ header {
 /* Works */
 .works-wrapper {
     width: 100%;
-    height: 600px;
+    height: 800px;
     background-color: #fff;
-    font-family: "futera","memo","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-family: "futera", "memo", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 .works-wrapper h1 {
@@ -206,10 +221,9 @@ header {
 }
 
 
-.work-port img{
+.work-port img {
     border: 1px #881738 solid;
     box-shadow: 0 0 1px;
-    width: 360px;
     height: 280px;
 }
 
@@ -223,7 +237,7 @@ header {
 .contact-wrapper {
     background-color: black;
     color: white;
-    font-family: "futera","memo","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-family: "futera", "memo", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 
 .contact-wrapper h1 {
@@ -233,21 +247,25 @@ header {
 }
 
 .contact-form {
-    margin-left: 220px;
+    text-align: center;
 }
 
 .contact-form label {
+    width: 60%;
     margin-top: 10px;
     margin-bottom: 5px;
+    text-align: left;
 }
 
-.contact-form input{
-    width: 80%;
+.contact-form input {
+    width: 60%;
     height: 40px;
+    background-color: #fff;
 }
+
 
 .contact-form textarea {
-    width: 80%;
+    width: 60%;
     height: 150px;
 }
 
@@ -255,18 +273,8 @@ div.contact-wrapper h1 hr {
     border-top: none !important;
 }
 
-.contact-form button {
-    margin-top: 10px;
-    background-color: #881738;
-    color: white;
-    width: 80%;
-    height: 35px;
-    border-style: none;
-}
-
 .twitter-form {
-    margin-top: 30px;
-    margin-left: 270px;
+    margin: 30px auto 0 auto;
     width: 30%;
     height: 80%;
     padding-top: 10px;
@@ -287,7 +295,7 @@ div.contact-wrapper h1 hr {
 }
 
 .twitter-form a {
-    margin-left: 70px;
+    margin: 0 auto;
     background-color: #00aced;
     color: white;
     border-radius: 10px;
@@ -324,70 +332,149 @@ footer {
 
 @media(max-width: 1000px) {
 
-.header {
-    height: auto;
-}
-.top-text h1 {
-    font-size: 120px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-.about-left {
-    width: 100%;
-}
-
-.about-left img {
-    text-align: center;
-    width: 50%;
-    height: 50%;
-}
-.work-port {
-    width: auto;
-    height: auto;
-}
-
-.twitter-form {
-    margin-left: 120px;
-}
-
-}
-
-
-
-
-@media(max-width: 670px) {
     .header {
         height: auto;
     }
 
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.about-right {
-    width: 100%;
-}
-
-.about-right p {
-        margin-left: 80px;
+    .top-text h1 {
+        font-size: 120px;
     }
-.works-wrapper{
-    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-wrapper {
+        height: ;
+    }
+
+    .about-left {
+        width: 400px;
+    }
+
+    .about-left img {
+        text-align: center;
+        width: 60%;
+        height: 60%;
+    }
+
+    .about-right {
+        margin: 0;
+    }
+
+    .about-right p {
+        height: 370px;
+    }
+
+    .about-right2 {
+        margin-bottom: 30px;
+    }
+
+    .works-wrapper {
+        height: 900px;
+    }
+
+    .work-port {
+        width: auto;
+        height: auto;
+    }
+
+    .work-port img {
+        width: 500px;
+        text-align: center;
+    }
+
+    .contact-form label {
+        width: 80%;
+    }
+
+    .contact-form input {
+        width: 80%;
+    }
+
+    .contact-form textarea {
+        width: 80%;
+    }
+
+    .twitter-form {
+        width: 50%;
+    }
+
+
 }
 
-.work-port {
-    width: auto;
-    height: auto;
-}
 
-.twitter-form {
-    margin-left: 50px;
-}
 
+
+@media(max-width: 768px) {
+    .header {
+        height: auto;
+    }
+
+    .top-text h1 {
+        font-size: 95px;
+    }
+
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-left ul {
+        width: 300px;
+    }
+
+    .about-wrapper {
+        height: auto;
+        text-align: center;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+    .about-right p {
+        width: 400px;
+        margin-left: 40px;
+    }
+
+    .about-right2 {
+        width: 450px;
+    }
+
+    .skill-left,
+    .skill-right {
+        width: 400px;
+    }
+
+    .works-wrapper {
+        height: auto;
+    }
+
+    .work-port {
+        width: auto;
+        height: auto;
+    }
+
+    .work-port img {
+        width: 430px;
+    }
+
+    .contact-form label {
+        width: 80%;
+    }
+
+    .contact-form input {
+        width: 80%;
+    }
+
+    .contact-form textarea {
+        width: 80%;
+    }
+
+    .twitter-form {
+        width: 60%;
+    }
 }
